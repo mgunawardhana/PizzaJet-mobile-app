@@ -1,35 +1,18 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
-import Login from './Apps/Screens/LoginScreen/Login';
+import {StatusBar, StyleSheet, View} from 'react-native';
 import Colors from './Apps/Utils/Colors';
+import Login from "./Apps/Screens/LoginScreen/Login";
 
 export default function App() {
-  return (
-    <View style={{alignItems:'center'}}>
-     <Image source={require('./assets/images/login.png')} style={styles.LoginImage}/>
-      <View style={styles.subContainer}>
-        <Text>
-          Let's get started
-        </Text>
-      </View>
-    </View>
-  );
+    return (
+
+        <View style={styles.container}>
+            <Login/>
+            <StatusBar style="auto"/>
+        </View>);
 }
 
 const styles = StyleSheet.create({
-  LoginImage:{
-    width:230,
-    height:450,
-    marginTop: 70,
-    borderWidth:4,
-    borderColor:Colors.BLACK,
-    borderRadius:15,
-  },
-  subContainer:{
-    width:'100%',
-    backgroundColor:Colors.PRIMARY,
-    height:'70%',
-    borderTopLeftRadius:30,
-    borderTopRightRadius:30,
-    padding:20,
-  },
+    container: {
+        flex: 1, backgroundColor: Colors.WHITE, paddingTop: 20
+    }
 });
