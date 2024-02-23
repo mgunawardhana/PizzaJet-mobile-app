@@ -1,8 +1,33 @@
-import {View, Image, StyleSheet, Text, TouchableOpacity} from 'react-native'
+import {View, Image, StyleSheet, TouchableOpacity, Text} from "react-native";
 import React from 'react'
 import Colors from '../../Utils/Colors'
+import * as WebBrowser from "expo-web-browser";
+import { useOAuth } from "@clerk/clerk-expo";
+import { useWarmUpBrowser } from '../../hooks/useWarmUpBrowser';
+
+WebBrowser.maybeCompleteAuthSession();
+
 //30.24
 export default function Login() {
+  // Warm up the android browser to improve UX
+  // https://docs.expo.dev/guides/authentication/#improving-user-experience
+  useWarmUpBrowser();
+    const { startOAuthFlow } = useOAuth({ strategy: "oauth_google" });
+
+  const onPress = React.useCallback(async () => {
+    try {
+      const { createdSessionId, signIn, signUp, setActive } =
+        await startOAuthFlow();
+ 
+      if (createdSessionId) {
+        setActive({ session: createdSessionId });
+      } else {
+        // Use signIn or signUp for next steps such as MFA
+      }
+    } catch (err) {
+      console.error("OAuth error", err);
+    }
+  }, []);
   return (
       <View style={{alignItems: 'center'}}>
         <Image source={require('./../../../assets/images/girl.png')} style={styles.LoginImage}/>
@@ -18,7 +43,7 @@ export default function Login() {
             fontSize: 17, color: Colors.WHITE, textAlign: 'center', marginTop: 20,
           }}> Best app to find services near you which one is the best guide.</Text>
 
-          <TouchableOpacity style={styles.button} onPress={()=>console.log("Hello there!")}>
+          <TouchableOpacity style={styles.button} onPress={onPress}>
             <Text style=
             {{textAlign:'center',
             fontSize: 17,
