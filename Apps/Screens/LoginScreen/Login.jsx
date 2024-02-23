@@ -5,18 +5,18 @@ import Colors from '../../Utils/Colors'
 export default function Login() {
   return (
       <View style={{alignItems: 'center'}}>
-        <Image source={require('./../../../assets/images/login.png')} style={styles.LoginImage}/>
+        <Image source={require('./../../../assets/images/girl.png')} style={styles.LoginImage}/>
         <View style={styles.subContainer}>
           <Text style={{
             fontSize: 27, color: Colors.WHITE, textAlign: 'center',
           }}>
             Let's find
-            <Text style={{fontWeight: 'bold'}}> Professional Cleaning and repair service</Text>
+            <Text style={{fontWeight: 'bold'}}> Professional Travel Guide </Text>
           </Text>
 
           <Text style={{
             fontSize: 17, color: Colors.WHITE, textAlign: 'center', marginTop: 20,
-          }}> Best app to find services near you which delivery you a professorial service.</Text>
+          }}> Best app to find services near you which one is the best guide.</Text>
 
           <View style={styles.button}>
             <Text style=
@@ -35,9 +35,9 @@ export default function Login() {
 // rns
 const styles = StyleSheet.create({
   LoginImage: {
-    width: 230,
-    height: 450,
-    marginTop: 70,
+    width: 240,
+    height: 470,
+    marginTop:40,
     borderWidth: 4,
     borderColor: Colors.BLACK,
     borderRadius: 15
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: Colors.PRIMARY,
     height: '75%',
-    marginTop:-20,
+    marginTop:-30,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     padding: 20,
