@@ -47,7 +47,7 @@ https://github.com/mGunawardhana/mobile-app-cw.git
 
 <div align="center">
 
-### © 2024 ɢᴜɴᴀᴡᴀʀᴅʜᴀɴᴀ,ɪɴᴄ. ᴀʟʟ ʀɪɢʜᴛꜱ ʀᴇꜱᴇʀᴠᴇᴅ.
+### Copyright (c) 2024 Maneesha Gunawardhana. ᴀʟʟ ʀɪɢʜᴛꜱ ʀᴇꜱᴇʀᴠᴇᴅ.
 
 </div>
 
