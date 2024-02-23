@@ -19,7 +19,12 @@ export default function Login() {
           }}> Best app to find services near you which delivery you a professorial service.</Text>
 
           <View style={styles.button}>
-            <Text>Let' s Get Started</Text>
+            <Text style=
+            {{textAlign:'center',
+            fontSize: 17,
+            color:Colors.PRIMARY
+          }}
+          >Let' s Get Started</Text>
           </View>
 
         </View>
