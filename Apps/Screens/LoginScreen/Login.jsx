@@ -1,7 +1,7 @@
-import {View, Image, StyleSheet, Text} from 'react-native'
+import {View, Image, StyleSheet, Text, TouchableOpacity} from 'react-native'
 import React from 'react'
 import Colors from '../../Utils/Colors'
-//28:30
+//30.24
 export default function Login() {
   return (
       <View style={{alignItems: 'center'}}>
@@ -18,14 +18,14 @@ export default function Login() {
             fontSize: 17, color: Colors.WHITE, textAlign: 'center', marginTop: 20,
           }}> Best app to find services near you which one is the best guide.</Text>
 
-          <View style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={()=>console.log("Hello there!")}>
             <Text style=
             {{textAlign:'center',
             fontSize: 17,
             color:Colors.PRIMARY
           }}
           >Let' s Get Started</Text>
-          </View>
+          </TouchableOpacity>
 
         </View>
       </View>
