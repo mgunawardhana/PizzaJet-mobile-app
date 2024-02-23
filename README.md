@@ -5,7 +5,7 @@
 1. **Clone the repository**:
 
 ```bash
-https://github.com/mGunawardhana/Next-Authentication-Role-Based-Security.git
+https://github.com/mGunawardhana/mobile-app-cw.git
 ```
 
 <div align="center">
