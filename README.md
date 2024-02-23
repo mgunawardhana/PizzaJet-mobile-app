@@ -31,7 +31,7 @@ https://github.com/mGunawardhana/mobile-app-cw.git
 <div align="center">
 
 <h2>Tools</h2>
-     <img src="https://skillicons.dev/icons?i=vscode" />
+     <img src="https://skillicons.dev/icons?i=vscode,androidstudio" />
      <br>
   <h2>TECHNOLOGIES</h2>
  
@@ -42,7 +42,7 @@ https://github.com/mGunawardhana/mobile-app-cw.git
 
 
 <div align="center">
-   <img src="https://skillicons.dev/icons?i=react," /> 
+   <img src="https://skillicons.dev/icons?i=react" /> 
 </div>
 
 <div align="center">
