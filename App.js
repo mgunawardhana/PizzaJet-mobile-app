@@ -25,11 +25,11 @@ const tokenCache = {
 };
 
 export default function App() {
-const [fontsLoaded, fontError] = useFonts({
-  outfitRegular: require("./assets/fonts/Outfit-Regular.ttf"),
-  outfitBold: require("./assets/fonts/Outfit-Bold.ttf"),
-  outfitMedium: require("./assets/fonts/Outfit-Medium.ttf"),
-});
+  const [fontsLoaded, fontError] = useFonts({
+    outfitRegular: require("./assets/fonts/Outfit-Regular.ttf"),
+    outfitBold: require("./assets/fonts/Outfit-Bold.ttf"),
+    outfitMedium: require("./assets/fonts/Outfit-Medium.ttf"),
+  });
   return (
     <ClerkProvider
       tokenCache={tokenCache}
