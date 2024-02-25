@@ -1,4 +1,4 @@
-![Screenshot (14)](https://github.com/mGunawardhana/mobile-app-cw/assets/100486080/cb2d4638-7ce9-49c4-9147-f3eec1e50990)
+![Screenshot (16)](https://github.com/mGunawardhana/mobile-app-cw/assets/100486080/2fd0845b-a116-4a30-bd42-772ccc75fe0a)
 
 ## Setup Instructions
 
