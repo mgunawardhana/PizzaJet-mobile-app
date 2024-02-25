@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1, alignItems: "center",
     }, iconContainer: {
-        backgroundColor: Colors.LIGHT_GREY, padding: 17, borderRadius: 99,
+        backgroundColor: Colors.LIGHT_GREY, padding: 17,
+        borderRadius: 50,
     },
 });
