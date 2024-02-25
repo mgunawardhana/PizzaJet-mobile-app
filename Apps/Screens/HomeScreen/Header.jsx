@@ -58,7 +58,12 @@ export default function Header() {
               Welcome,{" "}
             </Text>
             <Text
-              style={{ color: "#ffffff", fontWeight: "bold", fontSize: 16 }}
+              style={{
+                color: "#ffffff",
+                fontWeight: "bold",
+                fontSize: 20,
+                fontFamily: "outfit-medium",
+              }}
             >
               Maneesha Gunawardhana
             </Text>
@@ -112,6 +117,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     width: "85%",
     fontSize: 16,
+    fontFamily: "outfit",
   },
   searchBarContainer: {
     marginTop: 15,
