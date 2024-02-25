@@ -7,6 +7,9 @@ export default function Heading({ text, isViewAll = false }) {
     <View style={styles.container}>
       <Text style={styles.heading}>{text}</Text>
       {isViewAll ? <Text style={{ color: "blue" }}>View All</Text> : null}
+      <Text style={{ fontFamily: "outfit-medium", marginTop: 5 }}>
+        {item?.name}
+      </Text>
     </View>
   );
 }
