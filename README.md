@@ -1,10 +1,4 @@
 
-<div align="center">
-
-![Screenshot_1708876282](https://github.com/mGunawardhana/mobile-app-cw/assets/100486080/f799962a-3bc6-43d7-a104-ea03f79f787c)
-
-</div>
-
 ![Screenshot (20)](https://github.com/mGunawardhana/mobile-app-cw/assets/100486080/e5a62fe2-2c73-4f18-b317-00c01b605cbb)
 
 ## Setup Instructions
