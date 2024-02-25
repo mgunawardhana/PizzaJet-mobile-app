@@ -7,6 +7,7 @@ import { Entypo, FontAwesome, MaterialIcons } from "@expo/vector-icons";
 import BookingScreen from "../Screens/Booking/BookingScreen";
 import Colors from "../../Utils/Colors";
 import HomeNavigation from "./HomeNavigation";
+import BusinessDetailsScreen from "../Screens/BusinessDetailsScreen/BusinessDetailsScreen";
 
 /**
  * `TabNavigation` is a functional component that sets up the bottom tab navigation for the application.
@@ -84,6 +85,7 @@ export default function TabNavigation() {
           ),
         }}
       />
+      <Tab.Screen name="business_deta" component={BusinessDetailsScreen} />
 
       {/*<Tab.Screen name="login" component={Login} />*/}
     </Tab.Navigator>

@@ -7,6 +7,7 @@ import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
 import GlobalApi from "../../Utils/GlobalApi";
 import { useState } from "react";
 import BusinessListItem from "./BusinessListItem";
+import Colors from "../../Utils/Colors";
 
 export default function BusinessByCategoryScreen() {
   const param = useRoute().params;
@@ -45,10 +46,25 @@ export default function BusinessByCategoryScreen() {
           {param.category}
         </Text>
       </TouchableOpacity>
-      <FlatList
-        data={businesses}
-        renderItem={({ item, index }) => <BusinessListItem business={item} />}
-      ></FlatList>
+      {businesses.length > 0 ? (
+        <FlatList
+          data={businesses}
+          style={{ marginTop: 15 }}
+          renderItem={({ item, index }) => <BusinessListItem business={item} />}
+        ></FlatList>
+      ) : (
+        <Text
+          style={{
+            fontFamily: "outfit-medium",
+            color: Colors.GREY,
+            fontSize: 20,
+            textAlign: "center",
+            marginTop: "20%",
+          }}
+        >
+          No Foods Found
+        </Text>
+      )}
     </View>
   );
 }
