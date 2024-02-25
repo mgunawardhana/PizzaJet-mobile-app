@@ -15,7 +15,10 @@ export default function Slider() {
   const getSlider = () => {
     GlobalApi.getSlider()
       .then((response) => {
-        console.log(response.sliders);
+        console.log(
+          "***************************************************************************************************************************************************"
+        );
+        console.log(response);
         setSlider(response?.sliders);
       })
       .catch((error) => {
