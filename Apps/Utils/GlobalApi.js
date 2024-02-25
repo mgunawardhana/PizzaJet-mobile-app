@@ -18,7 +18,7 @@ const getSlider = async () => {
   const result = await request(MASTER_URL, query);
   return result;
 };
-
+// 2,13
 const getCategories = async () => {
   const query = gql`
     query GetCategory {
@@ -80,7 +80,7 @@ const getBusinessById = async (category) => {
       }
     }
   `;
-  const result = await request(MASTER_URL, query, { id });
+  const result = await request(MASTER_URL, query, { category });
   return result;
 };
 
