@@ -8,6 +8,7 @@ import GlobalApi from "../../Utils/GlobalApi";
 import { useState } from "react";
 import BusinessListItem from "./BusinessListItem";
 import Colors from "../../Utils/Colors";
+import PageHeading from "../../Components/PageHeading";
 
 export default function BusinessByCategoryScreen() {
   const param = useRoute().params;
@@ -31,21 +32,9 @@ export default function BusinessByCategoryScreen() {
 
   return (
     <View style={{ padding: 20, paddingTop: 30 }}>
-      <TouchableOpacity
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          gap: 10,
-          alignItems: "center",
-        }}
-        onPress={() => navigation.goBack()}
-      >
-        <Ionicons name="arrow-back" size={30} color="black" />
-        <Text style={{ fontSize: 25, fontFamily: "outfit-medium" }}>
-          {param.category}
-        </Text>
-      </TouchableOpacity>
+
+      <PageHeading title={param.category} />
+
       {businesses.length > 0 ? (
         <FlatList
           data={businesses}

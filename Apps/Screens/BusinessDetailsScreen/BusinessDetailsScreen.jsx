@@ -1,136 +1,130 @@
-import { View, Text, TouchableOpacity, Touchable } from "react-native";
-import React, { useEffect, useState } from "react";
-import { useNavigation, useRoute } from "@react-navigation/native";
-import { Image } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
-import { StyleSheet } from "react-native";
+import {Image, Modal, ScrollView, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import React, {useState} from "react";
+import {useNavigation, useRoute} from "@react-navigation/native";
+import {Ionicons, MaterialIcons} from "@expo/vector-icons";
 import Colors from "../../Utils/Colors";
-import { MaterialIcons } from "@expo/vector-icons";
-import Heading from "../../Components/Heading";
 import BusinessPhotos from "./BusinessPhotos";
+import BusinessAboutMe from "./BusinessAboutMe";
+import BookingModel from "./BookingModel";
 
 export default function BusinessDetailsScreen() {
-  const param = useRoute().params;
-  const [business, setBusiness] = useState(param.business);
-  const navigation = useNavigation();
-  const [isReadMore, setIsReadMore] = useState(false);
+    const param = useRoute().params;
+    const business = param.business;
+    const [showModel, setShowModel] = useState(false);
+    const navigation = useNavigation();
 
-  useEffect(() => {
-    // param && setBusiness(param.business);
-  }, []);
+    return (<View>
+        <ScrollView style={{height: '91%'}}>
+            <TouchableOpacity
+                style={styles.backBtnContainer}
+                onPress={() => navigation.goBack()}
+            >
+                <Ionicons name="arrow-back" size={30} color="black"/>
+            </TouchableOpacity>
+            <Image
+                source={{uri: business?.images[0]?.url}}
+                style={{width: "100%", height: 200}}
+            />
+            <View style={styles.infoContainer}>
+                <Text
+                    style={{
+                        fontWeight: "bold", fontSize: 20,
+                    }}
+                >
+                    {business?.name}
+                </Text>
+                <View styles={styles.subContainer}>
+                    <Text
+                        style={{
+                            fontWeight: "medium", color: Colors.LIGHT_ORANGE, fontSize: 20,
+                        }}
+                    >
+                        {business?.contactPerson}
+                    </Text>
+                    <Text
+                        style={{
+                            color: Colors.LIGHT_ORANGE,
+                            backgroundColor: Colors.LIGHT_GREY,
+                            padding: 5,
+                            borderRadius: 5,
+                            fontSize: 14,
+                        }}
+                    >
+                        {business?.category.name}
+                    </Text>
+                </View>
+                <Text
+                    style={{fontSize: 17, fontFamily: "outfit", color: Colors.GREY}}
+                >
+                    <MaterialIcons name="location-on" size={20} color="red"/>
+                    {business?.address}
+                </Text>
+                {/* horizontal line */}
+                <View
+                    style={{
+                        borderWidth: 0.4, borderColor: Colors.LIGHT_GREY, margin: 10, marginBottom: 10,
+                    }}
+                ></View>
 
-  return (
-    <View>
-      <TouchableOpacity
-        style={styles.backBtnContainer}
-        onPress={() => navigation.goBack()}
-      >
-        <Ionicons name="arrow-back" size={30} color="black" />
-      </TouchableOpacity>
-      <Image
-        source={{ uri: business?.images[0]?.url }}
-        style={{ width: "100%", height: 200 }}
-      />
-      <View style={styles.infoContainer}>
-        <Text
-          style={{
-            fontWeight: "bold",
-            fontSize: 20,
-          }}
-        >
-          {business?.name}
-        </Text>
-        <View styles={styles.subContainer}>
-          <Text
-            style={{
-              fontWeight: "medium",
-              color: Colors.LIGHT_ORANGE,
-              fontSize: 20,
-            }}
-          >
-            {business?.contactPerson}
-          </Text>
-          <Text
-            style={{
-              color: Colors.LIGHT_ORANGE,
-              backgroundColor: Colors.LIGHT_GREY,
-              padding: 5,
-              borderRadius: 5,
-              fontSize: 14,
-            }}
-          >
-            {business?.category.name}
-          </Text>
+                {/* about me section */}
+                <BusinessAboutMe business={business}/>
+
+                <View
+                    style={{
+                        borderWidth: 0.4, borderColor: Colors.LIGHT_GREY, margin: 5, marginBottom: 5,
+                    }}
+                ></View>
+
+                <BusinessPhotos business={business}/>
+            </View>
+        </ScrollView>
+        <View style={{
+            display: 'flex', flexDirection: 'row', margin: 5, gap: 8
+        }}>
+            <TouchableOpacity style={styles.messageBtn}>
+                <Text style={{
+                    textAlign: "center", color: Colors.LIGHT_ORANGE, fontSize: 18, fontFamily: "outfit-medium",
+                }}>Message</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.bookingBtn}
+                onPress={() => setShowModel(true)}
+            >
+                <Text style={{
+                    textAlign: "center", color: Colors.WHITE, fontSize: 18, fontFamily: "outfit-medium",
+                }}>Order Now</Text>
+            </TouchableOpacity>
         </View>
-        <Text
-          style={{ fontSize: 17, fontFamily: "outfit", color: Colors.GREY }}
+        <Modal
+        animationType="slide"
+        visible={showModel}
         >
-          <MaterialIcons name="location-on" size={20} color="red" />
-          {business?.address}
-        </Text>
-        {/* horizontal line */}
-        <View
-          style={{
-            borderWidth: 0.4,
-            borderColor: Colors.LIGHT_GREY,
-            margin: 10,
-            marginBottom: 10,
-          }}
-        ></View>
-        {/* about me section */}
-        <Heading text={"About me"} />
-        <Text
-          style={{
-            fontFamily: "outfit",
-            lineHeight: 22,
-            color: Colors.GREY,
-            fontSize: 14,
-          }}
-          numberOfLines={isReadMore ? 20 : 5}
-        >
-          {business.about}
-        </Text>
-        <TouchableOpacity onPress={() => setIsReadMore(!isReadMore)}>
-          <Text
-            style={{
-              color: Colors.LIGHT_ORANGE,
-              fontSize: 16,
-              fontFamily: "outfit",
-            }}
-          >
-            {isReadMore ? "Read Less" : "Read more"}
-          </Text>
-        </TouchableOpacity>
-      </View>
-
-      <View
-        style={{
-          borderWidth: 0.4,
-          borderColor: Colors.LIGHT_GREY,
-          margin: 5,
-          marginBottom: 5,
-        }}
-      ></View>
-
-      <BusinessPhotos business={business} />
-    </View>
-  );
+            <BookingModel hideModal={()=>{setShowModel(false)}} />
+        </Modal>
+    </View>);
 }
 
 const styles = StyleSheet.create({
-  backBtnContainer: {
-    position: "absolute",
-    zIndex: 10,
-    padding: 20,
-  },
-  infoContainer: {
-    padding: 20,
-    display: "flex",
-    gap: 7,
-  },
-  subContainer: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-  },
+    backBtnContainer: {
+        position: "absolute", zIndex: 10, padding: 20,
+    }, infoContainer: {
+        padding: 20, display: "flex", gap: 7,
+    }, subContainer: {
+        display: "flex", flexDirection: "row", alignItems: "center",
+    }, messageBtn: {
+        backgroundColor: Colors.WHITE,
+        padding: 15,
+        borderWidth: 1,
+        borderColor: Colors.LIGHT_ORANGE,
+        borderRadius: 99,
+        paddingBottom: 15,
+        flex: 1
+    }, bookingBtn: {
+        backgroundColor: Colors.LIGHT_ORANGE,
+        padding: 15,
+        borderRadius: 99,
+        borderWidth: 1,
+        borderColor: Colors.PRIMARY,
+        flex: 1
+    },
 });
