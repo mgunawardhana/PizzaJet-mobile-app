@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Touchable } from "react-native";
 import React, { useEffect, useState } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { Image } from "react-native";
@@ -7,11 +7,13 @@ import { StyleSheet } from "react-native";
 import Colors from "../../Utils/Colors";
 import { MaterialIcons } from "@expo/vector-icons";
 import Heading from "../../Components/Heading";
+import BusinessPhotos from "./BusinessPhotos";
 
 export default function BusinessDetailsScreen() {
   const param = useRoute().params;
   const [business, setBusiness] = useState(param.business);
   const navigation = useNavigation();
+  const [isReadMore, setIsReadMore] = useState(false);
 
   useEffect(() => {
     // param && setBusiness(param.business);
@@ -27,7 +29,7 @@ export default function BusinessDetailsScreen() {
       </TouchableOpacity>
       <Image
         source={{ uri: business?.images[0]?.url }}
-        style={{ width: "100%", height: 260 }}
+        style={{ width: "100%", height: 200 }}
       />
       <View style={styles.infoContainer}>
         <Text
@@ -80,14 +82,37 @@ export default function BusinessDetailsScreen() {
         <Text
           style={{
             fontFamily: "outfit",
+            lineHeight: 22,
             color: Colors.GREY,
             fontSize: 14,
           }}
-          numberOfLines={5}
+          numberOfLines={isReadMore ? 20 : 5}
         >
           {business.about}
         </Text>
+        <TouchableOpacity onPress={() => setIsReadMore(!isReadMore)}>
+          <Text
+            style={{
+              color: Colors.LIGHT_ORANGE,
+              fontSize: 16,
+              fontFamily: "outfit",
+            }}
+          >
+            {isReadMore ? "Read Less" : "Read more"}
+          </Text>
+        </TouchableOpacity>
       </View>
+
+      <View
+        style={{
+          borderWidth: 0.4,
+          borderColor: Colors.LIGHT_GREY,
+          margin: 5,
+          marginBottom: 5,
+        }}
+      ></View>
+
+      <BusinessPhotos business={business} />
     </View>
   );
 }
