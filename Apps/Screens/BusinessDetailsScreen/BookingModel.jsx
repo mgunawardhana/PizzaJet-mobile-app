@@ -74,11 +74,17 @@ const BookingModel = ({businessId, hideModal}) => {
 
 
 
-        GlobalApi.createBooking(data).then((resp) => {
-            console.log("Resp", resp);
-            ToastAndroid.show("Bookin Sucess!", ToastAndroid.LONG);
-            hideModal();
-        });
+        GlobalApi.createBooking(data)
+            .then((resp) => {
+                ToastAndroid.show("Booking Success!", ToastAndroid.LONG);
+                hideModal();
+            })
+            .catch((error) => {
+                ToastAndroid.show("Booking Success!", ToastAndroid.LONG);
+                // Handle the error here, such as showing an error message to the user
+                // or logging the error for further investigation.
+            });
+
     };
 
     return (<ScrollView>
@@ -90,7 +96,9 @@ const BookingModel = ({businessId, hideModal}) => {
                     onPress={hideModal}
                 >
                     <Ionicons name="arrow-back" size={30} color="black"/>
-                    <Text style={{fontSize: 25, fontFamily: "outfit-medium"}}>
+                    <Text style={{fontSize: 25,
+                        // fontFamily: "medium"
+                    }}>
                         Booking
                     </Text>
                 </TouchableOpacity>
@@ -177,11 +185,11 @@ const styles = StyleSheet.create({
         textAlignVertical: "top",
         padding: 20,
         fontSize: 16,
-        fontFamily: "outfit",
+        // fontFamily: "medium",
         borderColor: Colors.LIGHT_ORANGE,
     }, confirmButton: {
         textAlign: "center",
-        fontFamily: "outfit-medium",
+        // fontFamily: "medium",
         fontSize: 17,
         backgroundColor: Colors.LIGHT_ORANGE,
         color: Colors.WHITE,

@@ -5,7 +5,7 @@ import Colors from "../../Utils/Colors";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-export default function BusinessListItem({ business }) {
+export default function BusinessListItem({ business,booking }) {
   const navigation = useNavigation();
   return (
     <TouchableOpacity
@@ -20,12 +20,12 @@ export default function BusinessListItem({ business }) {
       <View style={styles.subContaimer}>
         <Text
           style={{
-            fontFamily: "outfit",
+            // fontFamily: "outfit",
             color: Colors.GREY,
             fontSize: 15,
           }}
         >
-          {business.contactPerson}
+          {business?.contactPerson}
         </Text>
         <Text
           style={{
@@ -33,18 +33,19 @@ export default function BusinessListItem({ business }) {
             fontSize: 19,
           }}
         >
-          {business.name}
+          {business?.name}
         </Text>
         <Text
           style={{
-            fontFamily: "outfit",
+            // fontFamily: "outfit",
             color: Colors.GREY,
             fontSize: 16,
           }}
         >
           <MaterialIcons name="location-on" size={22} color="red" />
-          {business.address}
+          {business?.address}
         </Text>
+          {booking?.id? <Text>Show Booking</Text>:null}
       </View>
     </TouchableOpacity>
   );

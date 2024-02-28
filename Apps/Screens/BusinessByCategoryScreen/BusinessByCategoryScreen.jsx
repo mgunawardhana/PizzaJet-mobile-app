@@ -44,7 +44,7 @@ export default function BusinessByCategoryScreen() {
       ) : (
         <Text
           style={{
-            fontFamily: "outfit-medium",
+            // fontFamily: "medium",
             color: Colors.GREY,
             fontSize: 20,
             textAlign: "center",

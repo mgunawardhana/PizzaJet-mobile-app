@@ -31,28 +31,24 @@ export default function App() {
     outfitMedium: require("./assets/fonts/Outfit-Medium.ttf"),
   });
   return (
-    <ClerkProvider
-      tokenCache={tokenCache}
-      publishableKey="pk_test_ZnJlc2gtc3F1aXJyZWwtNTEuY2xlcmsuYWNjb3VudHMuZGV2JA"
-    >
-      <View style={styles.container}>
-        {/* Signed in components */}
-        {/* Signed out components */}
-        <SignedOut>
-          <NavigationContainer>
-            <TabNavigation />
-          </NavigationContainer>
+      <ClerkProvider
+          tokenCache={tokenCache}
+          publishableKey="pk_test_ZnJlc2gtc3F1aXJyZWwtNTEuY2xlcmsuYWNjb3VudHMuZGV2JA"
+      >
+        <View style={styles.container}>
+          <StatusBar style="auto" />
+          <SignedOut>
+            <NavigationContainer>
 
-          {/* <Login /> */}
-        </SignedOut>
+              <TabNavigation />
+            </NavigationContainer>
+          </SignedOut>
 
-        <SignedIn>
-          <Text>You are Signed in</Text>
-        </SignedIn>
-
-        <StatusBar style="auto" />
-      </View>
-    </ClerkProvider>
+          <SignedIn>
+            <Login />
+          </SignedIn>
+        </View>
+      </ClerkProvider>
   );
 }
 

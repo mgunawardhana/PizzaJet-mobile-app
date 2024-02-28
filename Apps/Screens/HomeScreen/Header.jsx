@@ -1,8 +1,8 @@
 import React from "react";
 import { useUser } from "@clerk/clerk-expo";
 import { Image, StyleSheet, Text, TextInput, View } from "react-native";
-import Colors from "../../../Utils/Colors";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
+import Colors from "../../Utils/Colors";
 
 /**
  * `Header` is a functional component that renders the header of the application.
@@ -62,7 +62,7 @@ export default function Header() {
                 color: "#ffffff",
                 fontWeight: "bold",
                 fontSize: 20,
-                fontFamily: "outfit-medium",
+                fontFamily: "medium",
               }}
             >
               Maneesha Gunawardhana
@@ -93,8 +93,8 @@ export default function Header() {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
-    paddingTop: 40,
-    backgroundColor: Colors.PRIMARY,
+    paddingTop: 20,
+    backgroundColor: Colors.LIGHT_ORANGE,
     borderBottomLeftRadius: 25,
     borderBottomRightRadius: 25,
   },
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     width: "85%",
     fontSize: 16,
-    fontFamily: "outfit",
+    fontFamily: "medium",
   },
   searchBarContainer: {
     marginTop: 15,

@@ -46,7 +46,7 @@ export default function BusinessDetailsScreen() {
           <View styles={styles.subContainer}>
             <Text
               style={{
-                fontWeight: "medium",
+                // fontWeight: "medium",
                 color: Colors.LIGHT_ORANGE,
                 fontSize: 20,
               }}
@@ -66,7 +66,9 @@ export default function BusinessDetailsScreen() {
             </Text>
           </View>
           <Text
-            style={{ fontSize: 17, fontFamily: "outfit", color: Colors.GREY }}
+            style={{ fontSize: 17,
+                // fontFamily: "medium",
+                color: Colors.GREY }}
           >
             <MaterialIcons name="location-on" size={20} color="red" />
             {business?.address}
@@ -110,7 +112,7 @@ export default function BusinessDetailsScreen() {
               textAlign: "center",
               color: Colors.LIGHT_ORANGE,
               fontSize: 18,
-              fontFamily: "outfit-medium",
+              // fontWeight: "medium",
             }}
           >
             Message
@@ -126,7 +128,7 @@ export default function BusinessDetailsScreen() {
               textAlign: "center",
               color: Colors.WHITE,
               fontSize: 18,
-              fontFamily: "outfit-medium",
+              // fontFamily: "medium",
             }}
           >
             Order Now
