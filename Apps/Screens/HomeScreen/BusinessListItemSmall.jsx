@@ -9,7 +9,7 @@ export default function BusinessListItemSmall({ business }) {
       <Image source={{ uri: business.images[0].url }} style={styles.image} />
 
       <View style={styles.infoContainer}>
-        <Text style={{ fontSize: 17, fontFamily: "outfit-medium" }}>
+        <Text style={{ fontSize: 17, fontFamily: "medium" }}>
           {business?.name}
         </Text>
         <Text style={{ fontSize: 13, fontFamily: "outfit" }}>

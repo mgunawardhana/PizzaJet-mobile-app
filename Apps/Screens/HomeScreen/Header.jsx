@@ -62,7 +62,7 @@ export default function Header() {
                 color: "#ffffff",
                 fontWeight: "bold",
                 fontSize: 20,
-                fontFamily: "outfit-medium",
+                fontFamily: "medium",
               }}
             >
               Maneesha Gunawardhana
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     width: "85%",
     fontSize: 16,
-    fontFamily: "outfit",
+    fontFamily: "medium",
   },
   searchBarContainer: {
     marginTop: 15,

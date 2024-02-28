@@ -90,7 +90,7 @@ const BookingModel = ({businessId, hideModal}) => {
                     onPress={hideModal}
                 >
                     <Ionicons name="arrow-back" size={30} color="black"/>
-                    <Text style={{fontSize: 25, fontFamily: "outfit-medium"}}>
+                    <Text style={{fontSize: 25, fontFamily: "medium"}}>
                         Booking
                     </Text>
                 </TouchableOpacity>
@@ -177,11 +177,11 @@ const styles = StyleSheet.create({
         textAlignVertical: "top",
         padding: 20,
         fontSize: 16,
-        fontFamily: "outfit",
+        fontFamily: "medium",
         borderColor: Colors.LIGHT_ORANGE,
     }, confirmButton: {
         textAlign: "center",
-        fontFamily: "outfit-medium",
+        fontFamily: "medium",
         fontSize: 17,
         backgroundColor: Colors.LIGHT_ORANGE,
         color: Colors.WHITE,

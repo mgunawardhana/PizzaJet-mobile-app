@@ -13,6 +13,6 @@ const styles = StyleSheet.create({
     container: {
         display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between",
     }, heading: {
-        fontSize: 20, fontFamily: "outfit-medium", marginBottom: 10,
+        fontSize: 20, fontFamily: "medium", marginBottom: 10,
     },
 });
