@@ -85,7 +85,7 @@ export default function TabNavigation() {
           ),
         }}
       />
-      <Tab.Screen name="business_deta" component={BusinessDetailsScreen} />
+      {/* <Tab.Screen name="business-details" component={BusinessDetailsScreen} /> */}
 
       {/*<Tab.Screen name="login" component={Login} />*/}
     </Tab.Navigator>
