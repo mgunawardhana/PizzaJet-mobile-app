@@ -5,7 +5,7 @@
 
 ![Screenshot (37)](https://github.com/mGunawardhana/mobile-app-cw/assets/100486080/ba2f4eae-f3d4-4fbf-97a7-75dc25511289)
 
-![Screenshot (40)](https://github.com/mGunawardhana/mobile-app-cw/assets/100486080/42a639f2-c417-424e-8012-df5daee8e278)
+![Screenshot (45)](https://github.com/mGunawardhana/mobile-app-cw/assets/100486080/1666a7df-5c4e-4157-ad4d-ee224705e3f7)
 
 ![Screenshot (41)](https://github.com/mGunawardhana/mobile-app-cw/assets/100486080/0d122b54-1e0c-4a73-a3bd-e4eca0838f97)
 
