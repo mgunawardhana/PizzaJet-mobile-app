@@ -63,7 +63,7 @@ export default function Login() {
   return (
     <View style={{ alignItems: "center" }}>
       <Image
-        source={require("./../../../assets/images/girl.png")}
+        source={require("./../../../assets/images/chiken.png")}
         style={styles.LoginImage}
       />
       <View style={styles.subContainer}>
@@ -77,7 +77,7 @@ export default function Login() {
           Let's find
           <Text style={{ fontWeight: "bold" }}>
             {" "}
-            Professional Travel Guide{" "}
+            Delicious food{" "}
           </Text>
         </Text>
 
@@ -90,7 +90,7 @@ export default function Login() {
           }}
         >
           {" "}
-          Best app to find services near you which one is the best guide.
+          Best app to find services near you which one is the best.
         </Text>
 
         <TouchableOpacity style={styles.button} onPress={onPress}>
@@ -98,7 +98,7 @@ export default function Login() {
             style={{
               textAlign: "center",
               fontSize: 17,
-              color: Colors.PRIMARY,
+              color: Colors.LIGHT_ORANGE,
             }}
           >
             Let' s Get Started
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
   },
   subContainer: {
     width: "100%",
-    backgroundColor: Colors.PRIMARY,
+    backgroundColor: Colors.LIGHT_ORANGE,
     height: "75%",
     marginTop: -30,
     borderTopLeftRadius: 30,
