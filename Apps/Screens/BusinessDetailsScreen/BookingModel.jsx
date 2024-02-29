@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
         borderRadius: 99,
         color: Colors.WHITE,
         paddingHorizontal: 18,
-        backgroundColor: Colors.PRIMARY,
+        backgroundColor: Colors.LIGHT_ORANGE,
     }, unselectedTime: {
         paddingHorizontal: 18,
         padding: 8,

@@ -14,7 +14,7 @@ export default function BusinessAboutMe({ business }) {
         <Heading text={"About me"} />
         <Text
           style={{
-            fontFamily: "medium",
+            // fontFamily: "medium",
             lineHeight: 22,
             color: Colors.GREY,
             fontSize: 14,
@@ -28,7 +28,7 @@ export default function BusinessAboutMe({ business }) {
             style={{
               color: Colors.LIGHT_ORANGE,
               fontSize: 16,
-              fontFamily: "medium",
+              // fontFamily: "medium",
             }}
           >
             {isReadMore ? "Read Less" : "Read more"}

@@ -5,9 +5,10 @@ import HomeScreen from "../Screens/HomeScreen/HomeScreen";
 import ProfileScreen from "../Screens/ProfileScreen/ProfileScreen";
 import { Entypo, FontAwesome, MaterialIcons } from "@expo/vector-icons";
 import BookingScreen from "../Screens/Booking/BookingScreen";
-import Colors from "../../Utils/Colors";
+
 import HomeNavigation from "./HomeNavigation";
 import BusinessDetailsScreen from "../Screens/BusinessDetailsScreen/BusinessDetailsScreen";
+import Colors from "../Utils/Colors";
 
 /**
  * `TabNavigation` is a functional component that sets up the bottom tab navigation for the application.
@@ -36,7 +37,7 @@ export default function TabNavigation() {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: Colors.PRIMARY,
+        tabBarActiveTintColor: Colors.LIGHT_ORANGE,
       }}
     >
       {/*The `Tab.Screen` components are used to define the screens of the tab navigator.*/}
@@ -77,7 +78,7 @@ export default function TabNavigation() {
         options={{
           tabBarLabel: ({ color }) => (
             <Text style={{ color: color, fontSize: 12, marginTop: -7 }}>
-              Booking
+              Order Now
             </Text>
           ),
           tabBarIcon: ({ color, size }) => (

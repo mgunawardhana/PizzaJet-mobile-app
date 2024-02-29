@@ -23,15 +23,21 @@ export default function ProfileScreen() {
 
             }}>
 
-                <Image source={require('../../../assets/images/girl.png')}
+                <Image source={{ uri: 'https://e0.pxfuel.com/wallpapers/289/267/desktop-wallpaper-tirolzinho-cute-cartoon-cartoon-cute-cartoon-boy-cute-cartoon-boys.jpg'}}
                        style={{width: 90, height: 90, borderRadius: 99}}/>
 
                 <Text style={{
-                    fontSize: 26, marginTop: 8, fontFamily: 'bold', paddingTop: 10, color: Colors.WHITE
+                    fontSize: 26, marginTop: 8,
+                    // fontFamily: 'bold',
+                    paddingTop: 10, color: Colors.WHITE
                 }}>Maneesha Gunawardhana</Text>
                 <Text style={{
-                    fontSize: 18, marginTop: 8, fontFamily: 'bold', paddingTop: 10, color: Colors.WHITE
-                }}>maneesha@gmail.com</Text>
+                    fontSize: 18, marginTop: 8,
+                    // fontFamily: 'bold',
+                    paddingTop: 10, color: Colors.WHITE
+                }}>mnshgnwardhana622@gmail.com
+
+</Text>
             </View>
         </View>
         <View style={{paddingTop:60}}>
@@ -44,7 +50,8 @@ export default function ProfileScreen() {
                       }}>
                           <Ionicons name={item.icon} size={35} color={Colors.LIGHT_ORANGE}/>
                           <Text style={{
-                              fontFamily: 'outfit', fontSize: 20,
+                              // fontFamily: 'outfit',
+                              fontSize: 20,
                           }}>{item.name}</Text>
                       </TouchableOpacity>)}/>
         </View>

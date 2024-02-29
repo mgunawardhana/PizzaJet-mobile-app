@@ -45,7 +45,7 @@ export default function Header() {
 
       <View style={styles.profileMainContainer}>
         <View style={styles.profileContainer}>
-          <Image source={{ uri: user?.imageUrl }} style={styles.userImage} />
+          <Image source={{ uri: 'https://e0.pxfuel.com/wallpapers/289/267/desktop-wallpaper-tirolzinho-cute-cartoon-cartoon-cute-cartoon-boy-cute-cartoon-boys.jpg' }} style={styles.userImage} />
           <View>
             <Text
               style={{
@@ -62,7 +62,7 @@ export default function Header() {
                 color: "#ffffff",
                 fontWeight: "bold",
                 fontSize: 20,
-                fontFamily: "medium",
+                // fontFamily: "medium",
               }}
             >
               Maneesha Gunawardhana
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     width: "85%",
     fontSize: 16,
-    fontFamily: "medium",
+    // fontFamily: "medium",
   },
   searchBarContainer: {
     marginTop: 15,
@@ -131,8 +131,8 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   userImage: {
-    width: 45,
-    height: 45,
+    width: 52,
+    height: 52,
     borderRadius: 99,
   },
 });
