@@ -16,9 +16,13 @@ export default function PageHeading ({title}) {
                 onPress={() => navigation.goBack()}
             >
                 <Ionicons name="arrow-back" size={30} color="black"/>
+<<<<<<< HEAD
                 <Text style={{fontSize: 25,
                     // fontFamily: "medium"
                 }}>
+=======
+                <Text style={{fontSize: 25, fontFamily: "medium"}}>
+>>>>>>> origin/master
                     {title}
                 </Text>
             </TouchableOpacity>

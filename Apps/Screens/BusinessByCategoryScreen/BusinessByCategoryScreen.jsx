@@ -44,7 +44,11 @@ export default function BusinessByCategoryScreen() {
       ) : (
         <Text
           style={{
+<<<<<<< HEAD
             // fontFamily: "medium",
+=======
+            fontFamily: "medium",
+>>>>>>> origin/master
             color: Colors.GREY,
             fontSize: 20,
             textAlign: "center",
