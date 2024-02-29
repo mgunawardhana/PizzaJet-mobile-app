@@ -11,7 +11,7 @@ export default function BusinessAboutMe({ business }) {
     business && (
       <View>
         {/* about me section */}
-        <Heading text={"About me"} />
+        <Heading text={"About Pizza"} />
         <Text
           style={{
             // fontFamily: "medium",
