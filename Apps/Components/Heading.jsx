@@ -3,22 +3,16 @@ import React from "react";
 
 export default function Heading({text, isViewAll = false}) {
     return (<View style={styles.container}>
-            <Text style={styles.heading}>{text}</Text>
-            {isViewAll ? <Text style={{color: "blue"}}>View All</Text> : null}
+        <Text style={styles.heading}>{text}</Text>
+        {isViewAll ? <Text style={{color: "blue"}}>View All</Text> : null}
 
-        </View>);
+    </View>);
 }
 
 const styles = StyleSheet.create({
     container: {
         display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between",
     }, heading: {
-<<<<<<< HEAD
-        fontSize: 20,
-        // fontFamily: "medium",
-        marginBottom: 10,
-=======
         fontSize: 20, fontFamily: "medium", marginBottom: 10,
->>>>>>> origin/master
     },
 });

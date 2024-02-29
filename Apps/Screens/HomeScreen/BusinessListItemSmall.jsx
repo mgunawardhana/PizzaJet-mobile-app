@@ -5,35 +5,31 @@ import Colors from "../../Utils/Colors";
 
 export default function BusinessListItemSmall({ business }) {
   return (
-    <View style={styles.container}>
-      <Image source={{ uri: business.images[0].url }} style={styles.image} />
+      <View style={styles.container}>
+          <Image source={{ uri: business.images[0].url }} style={styles.image} />
 
-      <View style={styles.infoContainer}>
-<<<<<<< HEAD
-        <Text style={{ fontSize: 17}}>
-=======
-        <Text style={{ fontSize: 17, fontFamily: "medium" }}>
->>>>>>> origin/master
-          {business?.name}
-        </Text>
-        <Text style={{ fontSize: 13}}>
-          {business?.contactPerson}
-        </Text>
-        <Text
-          style={{
-            fontSize: 10,
-            // fontFamily: "outfit",
-            padding: 3,
-            backgroundColor: Colors.LIGHT_ORANGE,
-            borderRadius: 3,
-            alignSelf: "flex-start",
-            paddingHorizontal: 7,
-          }}
-        >
-          {business?.category.name}
-        </Text>
+          <View style={styles.infoContainer}>
+              <Text style={{ fontSize: 17, fontFamily: "medium" }}>
+                  {business?.name}
+              </Text>
+              <Text style={{ fontSize: 13, fontFamily: "outfit" }}>
+                  {business?.contactPerson}
+              </Text>
+              <Text
+                  style={{
+                      fontSize: 10,
+                      // fontFamily: "outfit",
+                      padding: 3,
+                      backgroundColor: Colors.PRIMARY,
+                      borderRadius: 3,
+                      alignSelf: "flex-start",
+                      paddingHorizontal: 7,
+                  }}
+              >
+                  {business?.category.name}
+              </Text>
+          </View>
       </View>
-    </View>
   );
 }
 

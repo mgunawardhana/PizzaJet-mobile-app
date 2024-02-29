@@ -21,43 +21,39 @@ export default function BusinessByCategoryScreen() {
 
   const getBusinessByCategory = () => {
     GlobalApi.getBusinessById(param.category)
-      .then((response) => {
-        setBusinesses(response.businesses);
-        console.log(response.businesses);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+        .then((response) => {
+          setBusinesses(response.businesses);
+          console.log(response.businesses);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
   };
 
   return (
-    <View style={{ padding: 20, paddingTop: 30 }}>
+      <View style={{ padding: 20, paddingTop: 30 }}>
 
-      <PageHeading title={param.category} />
+        <PageHeading title={param.category} />
 
-      {businesses.length > 0 ? (
-        <FlatList
-          data={businesses}
-          style={{ marginTop: 15 }}
-          renderItem={({ item, index }) => <BusinessListItem business={item} />}
-        ></FlatList>
-      ) : (
-        <Text
-          style={{
-<<<<<<< HEAD
-            // fontFamily: "medium",
-=======
-            fontFamily: "medium",
->>>>>>> origin/master
-            color: Colors.GREY,
-            fontSize: 20,
-            textAlign: "center",
-            marginTop: "20%",
-          }}
-        >
-          No Foods Found
-        </Text>
-      )}
-    </View>
+        {businesses.length > 0 ? (
+            <FlatList
+                data={businesses}
+                style={{ marginTop: 15 }}
+                renderItem={({ item, index }) => <BusinessListItem business={item} />}
+            ></FlatList>
+        ) : (
+            <Text
+                style={{
+                  fontFamily: "medium",
+                  color: Colors.GREY,
+                  fontSize: 20,
+                  textAlign: "center",
+                  marginTop: "20%",
+                }}
+            >
+              No Foods Found
+            </Text>
+        )}
+      </View>
   );
 }
