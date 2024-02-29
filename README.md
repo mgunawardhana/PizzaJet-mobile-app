@@ -1,5 +1,16 @@
 
-![Screenshot (20)](https://github.com/mGunawardhana/mobile-app-cw/assets/100486080/e5a62fe2-2c73-4f18-b317-00c01b605cbb)
+![Screenshot (36)](https://github.com/mGunawardhana/mobile-app-cw/assets/100486080/f5be7354-96ed-4d9c-942e-5410274862e0)
+
+![Screenshot (37)](https://github.com/mGunawardhana/mobile-app-cw/assets/100486080/ba2f4eae-f3d4-4fbf-97a7-75dc25511289)
+
+![Screenshot (40)](https://github.com/mGunawardhana/mobile-app-cw/assets/100486080/42a639f2-c417-424e-8012-df5daee8e278)
+
+![Screenshot (41)](https://github.com/mGunawardhana/mobile-app-cw/assets/100486080/0d122b54-1e0c-4a73-a3bd-e4eca0838f97)
+
+![Screenshot (42)](https://github.com/mGunawardhana/mobile-app-cw/assets/100486080/9e711a9a-30e1-40bc-849d-43170092cf1e)
+
+![Screenshot (43)](https://github.com/mGunawardhana/mobile-app-cw/assets/100486080/d4a4d7b6-fed4-48af-9a36-464b22d5748a)
+
 
 ## Setup Instructions
 
